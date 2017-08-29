@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>simple comic template</title>
+
+	<!-- stripthis! -->
+	<link rel="stylesheet" type="text/css" href="../dep/st/font/stylesheet.css" />
+</head>
+<body>
+	<!-- 2018.08.29 - OOPS -->
+	<div>
+		<textarea class="comicbrowser-render">
+			"Polymorphism @ play!" black
+
+			a new dark corridor panel
+			narrator says whispering "Red-Label TEA!"
+			bianca collar dressed looking right 
+			bianca same says "john, get me a red-label"
+			kesiev with glasses using phone looking left replies whispering "how much? dust or leaf?"
+			bianca same says "100 gms, leaf!"
+				
+			a new hypnotic panel
+			narrator says whispering "Red-Label WHISKEY!"
+			kesiev with glasses looking right using phone
+			peter collar dressed with dark scarf looking left replies "john, get me a red-label"
+			kesiev same says whispering "how would you prefer?"
+			peter same says "Single malt, on the rocks!"
+
+			credits: "(c) 2017 by SivaramaSundar, Framework courtesy by kesiev@stripthis"
+		</textarea>
+	</div>
+
+	<!-- stripthis! -->
+	<script type="text/javascript" src="../dep/st/libs/comicbrowser.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/comicgenerator.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-kesiev.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-sandbox.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-cw.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-lw.js"></script>
+	<script>
+		function onComicgeneratorConfigure() {
+			// You can change the comicbrowser and comicgenerator configuration here before showing your comic, so you
+			// can set the series ID and, eventually, the "stripthis" engine root path, like this.
+			//
+			// comicbrowser._settings.server.url="path/to/server.php?seriesid=<your comic id>";
+			comicgenerator._settings.placeholders.server = "../dep/st/";
+		}
+	</script>
+</body>
+
+</html>

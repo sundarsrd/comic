@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>interactive comic template</title>
+
+	<link rel="stylesheet" href="../css/reveal.css">
+	<link rel="stylesheet" href="../css/theme/league.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+	<!-- Google Fonts Selection - Sundar -->
+	<link href="https://fonts.googleapis.com/css?family=Cookie|Josefin+Slab:600|Lobster|Shadows+Into+Light+Two" rel="stylesheet">
+
+	<!-- Emoji Font / Css - Sundar (https://afeld.github.io/emoji-css/) -->
+	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+	<!-- stripthis! -->
+	<link rel="stylesheet" type="text/css" href="../dep/st/font/stylesheet.css" />
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = "../" + window.location.search.match(/print-pdf/) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+<body>
+	<!-- 
+		Style overrides!!!
+		Why?!: We have to override the box-shadow around images, to prevent borders in the stripthis images (as part of comicstrip integration)! 
+				https://stackoverflow.com/questions/23082660/how-to-style-images-in-reveal-js 
+		// Don't Change ".reveal section img"
+	-->
+	<style>
+		.reveal section img {
+			background: none;
+			border: none;
+			box-shadow: none;
+		}
+
+		.reveal section h3 {
+			font-family: "Lobster", cursive;
+		}
+
+		.reveal section h6 {
+			font-family: 'Shadows Into Light Two', cursive;
+			font-size: '.05em';
+		}
+
+		img {
+			max-width: 100%;
+			height: auto;
+			width: auto;
+		}
+	</style>
+	<div class="reveal">
+		<div class="slides">
+			<!-- 2018.08.22 - Lniux -->
+			<section>
+				<section>
+					<textarea class="comicbrowser-render">
+						"The 'Killer' linux cmd!" black
+
+						a new dark office panel
+						narrator says whispering "One day @ ofc.."
+						bianca collar dressed using mac looking down says "hey dude..."
+						bianca same looking up looking right says "what's the killer cmd of linux?"
+						kesiev with glasses with mug looking down looking left replies whispering "hhmm... 'kill' eh?!"
+						kesiev same looking up surprised says to self whispering "i wonder, what'd that be?"
+							
+						another new very large office panel
+						narrator says whispering "..."
+						bianca same blushing face vampire mouth looking up looking right says "Nope! it's the *bourne* shell! [bsh]"
+						kesiev with glasses looking up looking left with mug ghostly head serious mouth says to self whispering "Oh! NOOO! Please!"					
+
+						credits: "(c) 2017 by SivaramaSundar, Framework courtesy by kesiev@stripthis"
+					</textarea>
+				</section>
+				<section>
+					<textarea class="comicbrowser-render">
+						"..." black 
+
+						a new dark office panel
+						narrator says whispering "...a little while later"
+						bianca collar dressed with mug looking right looking up says "what's even more dangerous than [bsh]?"
+						kesiev with glasses looking down looking right using mac serious mouth replies "Shoot"
+						somebody says to self whispering "Not *Again*!"						
+
+						a new thin hypnotic panel
+						bianca same vampire mouth replies "it's [BASH]! Bourne again shell! :D"
+
+						a new thin dark despair panel
+						kesiev with glasses hurt head vanishing punches rolling eyes looking left shocked mouth says to replies loudly "Ow! Oww!! Owww!!! !#%^@"	
+
+						credits: "(c) 2017 by SivaramaSundar, Framework courtesy by kesiev@stripthis"
+					</textarea>
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<!-- jquery & other pre-reqisites ! -->
+	<script src="../lib/js/head.min.js"></script>
+	<script src="../lib/js/jquery.js"></script>
+
+	<!-- reveal! -->
+	<script src="../js/reveal.js"></script>
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			dependencies: [
+				{ src: '../plugin/markdown/marked.js' },
+				{ src: '../plugin/markdown/markdown.js' },
+				{ src: '../plugin/notes/notes.js', async: true },
+				{ src: '../plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			],
+			progress: true,
+			autoslide: 5000,
+			autoslideStoppable: true
+		});
+	</script>
+	<!-- stripthis! -->
+	<script type="text/javascript" src="../dep/st/libs/comicbrowser.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/comicgenerator.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-kesiev.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-sandbox.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-cw.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-lw.js"></script>
+	<script>
+		function onComicgeneratorConfigure() {
+			// You can change the comicbrowser and comicgenerator configuration here before showing your comic, so you
+			// can set the series ID and, eventually, the "stripthis" engine root path, like this.
+			//
+			// comicbrowser._settings.server.url="path/to/server.php?seriesid=<your comic id>";
+			comicgenerator._settings.placeholders.server = "../dep/st/";
+		}
+	</script>
+</body>
+
+</html>
