@@ -1,4 +1,4 @@
-#!/bin/sh
+!/bin/sh
 # purpose:
 # create a new Comic from templates into the specified folder, using the given comic name
 # 
