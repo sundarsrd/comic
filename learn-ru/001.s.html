@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>simple comic template</title>
+
+	<!-- stripthis! -->
+	<link rel="stylesheet" type="text/css" href="../dep/st/font/stylesheet.css" />
+</head>
+<body>
+	<!-- 2018.08.22 - Lniux -->
+	<!--<section data-background-image="images/devils-bridge2.jpg">-->
+	<div>
+		<textarea class="comicbrowser-render">
+			"Russian Lessons #001" black
+
+			office panel
+			bianca shirt looking down using mac
+			kesiev with glasses little smile looking up looking left using phone t-shirt says "Привет Анна"!
+			kesiev says to self "Hi [prˈьvˈet]"
+			
+			another panel
+			bianca same looking right looking up little smile replies "Привет! Как дела Сундар"?
+			bianca replies to self "How are you [kak dˈeƚə]"
+			kesiev same replies "Хорошо"!
+			kesiev replies to self "khorosho [χərɐʂo]"
+
+			dark panic panel
+			somebody replies to self "Time to learn the Cyrillic alphabets!!!"
+			peter ghostly head white jacket using tablet looking up looking left smiling 
+
+			credits: "(c) 2018 by Sivarama Sundar &amp; Anna Skvortsova, Framework courtesy by kesiev@stripthis - 
+			https://www.dict.com/russian-english/, 
+			http://www.russianlessons.net/lessons/lesson1_alphabet.php"
+		</textarea>
+	</div>
+
+	<!-- stripthis! -->
+	<script type="text/javascript" src="../dep/st/libs/comicbrowser.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/comicgenerator.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-kesiev.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-sandbox.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-cw.js"></script>
+	<script type="text/javascript" src="../dep/st/libs/stencils-lw.js"></script>
+	<script>
+		function onComicgeneratorConfigure() {
+			// You can change the comicbrowser and comicgenerator configuration here before showing your comic, so you
+			// can set the series ID and, eventually, the "stripthis" engine root path, like this.
+			//
+			// comicbrowser._settings.server.url="path/to/server.php?seriesid=<your comic id>";
+			comicgenerator._settings.placeholders.server = "../dep/st/";
+		}
+	</script>
+</body>
+
+</html>
